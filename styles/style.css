@@ -1,0 +1,162 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*16px = 1rem*/
+/*ctrl+f para buscar en el código*/
+:root{  /*para declarar variables*/
+  --color-primario:#000000;
+  --color-secundario:#F6F6F6;
+  --color-terciario:#22D4FD;
+  --color-hover:#272727;
+
+  --fuente-montserrat: 'Montserrat', sans-serif;
+  --fuente-krona: 'Krona One', sans-serif;
+}
+
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+body {
+  background-color: var(--color-primario);
+  color: var(--color-secundario);
+  /*height: 100vh;*/
+  box-sizing: border-box;
+}
+
+.header {
+  padding: 2% 0% 0% 15%;
+  
+}
+
+
+.header_menu {
+  display: flex;
+  gap: 80px;
+
+}
+
+.header_menu_link {
+  font-family: var(--fuente-montserrat);
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--color-terciario);
+  text-decoration: none;
+}
+
+
+
+.presentacion{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    /*margin: 10% 15%;*/
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion_contenido {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+
+}
+
+.presentacion_contenido_titulo {
+  font-size: 2.25rem;
+  font-family: var(--fuente-krona);
+
+}
+
+.titulo-destaque {
+  color: var(--color-terciario);
+}       
+
+.presentacion_contenido_texto {
+  font-size: 1.5rem;
+  font-family: var(--fuente-montserrat);
+
+}
+
+.presentacion_enlaces{
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center; /* se usa esto porte mi eje es vertical, justify-content es eje horizontal*/
+  gap: 32px;
+
+
+}
+
+.presentacion_enlaces_link {
+  width: 50%;
+  /*background-color: #22D4FD;*/
+  text-align: center;
+  padding: 21.5px 0;
+  border-radius: 16px;
+  font-family: var(--fuente-montserrat);
+  font-size: 1.5rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: var(--color-secundario);
+  border: 2px solid var(--color-terciario); /*2px tamaño border solid estilo del borde #color*/
+  border-radius: 8px;
+  display: flex;
+  justify-content: center; /*justify contetn pq el eje es horizontal*/
+  gap: 10px;
+  
+
+
+}
+
+.presentacion_enlaces_link:hover{ /*para que los botones cambien de color cuando los toco con el cursor*/
+  background-color: var(--color-hover);
+
+} 
+
+.presentacion_enlaces_subtitulo {
+  font-family: var(--fuente-krona);
+  font-size: 1.5rem;
+  font-weight: 400;
+
+}
+
+.presentacion_imagen {
+  width: 50%;
+
+}
+
+.footer {
+  background-color:var(--color-terciario);
+  padding: 1.5rem;
+  color:var(--color-primario);
+  text-align: center;
+  font-family: var(--fuente-montserrat);
+  font-size: 1.5rem;
+  font-weight: 400;
+
+
+}
+/*responsividad */
+@media (max-width: 1200px) { /* media queries es para ajustar la pagina a un celular cuando la pantalla del menos de 1200px la pone en columa los elementos*/
+  .header{
+    padding: 10%;
+  }
+
+  .header_menu{
+    justify-content: center;
+  }
+ .presentacion{
+    flex-direction: column-reverse; /*el reverse invierte el orden de los elementos de la columna poniendo en este caso la foto primero*/
+    padding: 5%;
+  }
+
+  .presentacion_contenido{
+    width: auto;
+  }
+
+}
+
